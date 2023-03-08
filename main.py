@@ -1,4 +1,5 @@
 #DONE
+#Julius Inocencio
 def encode(password):
     new = ''
     for i in password:
@@ -17,7 +18,8 @@ def decode():
 
 if __name__ == "__main__":
 
-    #stored_password = ''
+    stored_password = ''
+    encoded_password = ''
     menu_open = True
     
     while menu_open:
@@ -29,16 +31,13 @@ if __name__ == "__main__":
         option = int(input('Please enter an option: '))
 
         if option == 1:
-            password = input('Please enter your password to encode: ')
-            stored_password = encode(password)
+            stored_password = input('Please enter your password to encode: ')
+            encoded_password = encode(stored_password)
             print('Your password has been encoded and stored!')
-            Continue = False
-
         elif option == 2:
-            print('In progress')
-
+            print(f'The encoded password is {encoded_password}, and the original password is {stored_password}')
+            #DECODE IN PROGRESS
         elif option == 3:
-            #print(stored_password)  #FOR TESTING PURPOSE
             menu_open = False
 
 
